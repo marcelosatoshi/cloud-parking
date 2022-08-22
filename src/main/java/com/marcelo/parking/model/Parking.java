@@ -2,94 +2,94 @@ package com.marcelo.parking.model;
 
 import java.time.LocalDateTime;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Parking {
 
-	private String id;
-	private String license;
-	private String state;
-	private String model;
-	private String color;
-	private LocalDateTime entryDate;
-	private LocalDateTime exitDate;
-	private Double bill;
+    @Id
+    private String id;
+    private String license;
+    private String state;
+    private String model;
+    private String color;
+    private LocalDateTime entryDate;
+    private LocalDateTime exitDate;
+    private Double bill;
 
-	public Parking(String id, String license, String state, String model, String color) {
-		this.id = id;
-		this.license = license;
-		this.state = state;
-		this.model = model;
-		this.color = color;
-	}
-	
-	
+    public Parking(String id, String license, String state, String model, String color) {
+        this.id = id;
+        this.license = license;
+        this.state = state;
+        this.model = model;
+        this.color = color;
+    }
 
-	public Parking() {
-	}
+    public Parking() {
+    }
 
+    public String getId() {
+        return id;
+    }
 
+    public void setId(String id) {
+        this.id = id;
+    }
 
-	public String getId() {
-		return id;
-	}
+    public String getLicense() {
+        return license;
+    }
 
-	public void setId(String id) {
-		this.id = id;
-	}
+    public void setLicense(String license) {
+        this.license = license;
+    }
 
-	public String getLicense() {
-		return license;
-	}
+    public String getState() {
+        return state;
+    }
 
-	public void setLicense(String license) {
-		this.license = license;
-	}
+    public void setState(String state) {
+        this.state = state;
+    }
 
-	public String getState() {
-		return state;
-	}
+    public String getModel() {
+        return model;
+    }
 
-	public void setState(String state) {
-		this.state = state;
-	}
+    public void setModel(String model) {
+        this.model = model;
+    }
 
-	public String getModel() {
-		return model;
-	}
+    public String getColor() {
+        return color;
+    }
 
-	public void setModel(String model) {
-		this.model = model;
-	}
+    public void setColor(String color) {
+        this.color = color;
+    }
 
-	public String getColor() {
-		return color;
-	}
+    public LocalDateTime getEntryDate() {
+        return entryDate;
+    }
 
-	public void setColor(String color) {
-		this.color = color;
-	}
+    public void setEntryDate(LocalDateTime entryDate) {
+        this.entryDate = entryDate;
+    }
 
-	public LocalDateTime getEntryDate() {
-		return entryDate;
-	}
+    public LocalDateTime getExitDate() {
+        return exitDate;
+    }
 
-	public void setEntryDate(LocalDateTime entryDate) {
-		this.entryDate = entryDate;
-	}
+    public void setExitDate(LocalDateTime exitDate) {
+        this.exitDate = exitDate;
+    }
 
-	public LocalDateTime getExitDate() {
-		return exitDate;
-	}
+    public Double getBill() {
+        return bill;
+    }
 
-	public void setExitDate(LocalDateTime exitDate) {
-		this.exitDate = exitDate;
-	}
-
-	public Double getBill() {
-		return bill;
-	}
-
-	public void setBill(Double bill) {
-		this.bill = bill;
-	}
-
+    public void setBill(Double bill) {
+        this.bill = bill;
+    }
 }
